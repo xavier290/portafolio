@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+:root {
+    --orange: #ba5536;
+    --black: #1f1e1d;
+    --colorFont: #ffff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--colorFont);
+    scrollbar-width: thin;
+    scrollbar-color: var(--orange) var(--black);
+}
+
+body {
+    background: var(--black);
+}
+
+body::-webkit-scrollbar {
+    width: 4px;
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--black);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--orange);
+    border-radius: 20px;
+}
+
+.container {
+    height: 0vh;
+    background-color: var(--black);
+    background-image: url(/images/dev.png);
+    background-repeat: no-repeat;
+    background-size: 260px;
+    background-position: 92.5% 80%;
+    background-attachment: fixed;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 14vh;
+    display: flex;
+    align-items: center;
+    padding-left: 6%;
+    padding-right: 6%;
+    z-index: 4;
+    overflow: hidden;
+}
+
+.logo {
+    background-color: var(--black);
+    width: 60px;
+    border-radius: 50%;
+    border: solid 1px #aaaaaa;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.logo a {
+    font-family: 'Reggae One', cursive;
+    text-decoration: none;
+    font-size: 40px;
+}
+
+.menu {
+    flex: 1;
+    text-align: right;
+}
+
+.menu li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 30px;
+}
+
+.menu li:last-child {
+    margin: 0;
+}
+
+.menu a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all .4s;
+    position: relative;
+}
+
+.menu a:hover {
+    color: #d6694b;
+}
+
+.menu .active {
+    color: var(--orange);
+}
+
+.menu .active-p {
+    color: var(--orange);
+}
+
+.active::after {
+    content: '';
+    width: 64px;
+    height: 2px;
+    background: var(--orange);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.active-p::after {
+    content: '';
+    width: 82px;
+    height: 2px;
+    background: var(--orange);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    display: block;
+}
+
+.cnt {
+    width: 90%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.home {
+	height: 100vh;
+	display: flex;
+	text-align: left;
+	flex-direction: column;
+	padding-top: 130px;
+}
+
+.salute h1 {
+    font-family: 'Reggae One', cursive;
+    font-size: 38px;
+    color: var(--orange);
+    margin-bottom: 10px;
+}
+
+.main-text {
+    font-family: 'Roboto', 'Montserrat' ,sans-serif;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.main-text h1 {
+    font-size: 55px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.main-text h4 {
+    color: #aaaaaa;
+}
+
+.lets-talk {
+    position: absolute;
+    bottom: 20px;
+    border-bottom: solid 1px #a3a3a3;
+}
+
+.lets-talk a {
+    color: var(--orange);
+    font-size: 22px;
+    text-decoration: none;
+    font-family: 'Reggae One', cursive;
+}
+
+.footer {
+    height: 100vh;
+    background-color: var(--black);
+    padding-top: 20%;
+}
+
+.links li {
+    list-style: none;
+    display: inline-block;
+}
+
+.links a img {
+    width: 30px;
+}
