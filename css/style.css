@@ -8,7 +8,7 @@
     --colorFont: #ffff;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -18,11 +18,17 @@
 }
 
 body {
-    background: var(--black);
+    background-color: var(--black);
+    background-image: url(/images/dev.png);
+    background-repeat: no-repeat;
+    background-size: 260px;
+    background-position: 92.5% 80%;
+    background-attachment: fixed;
 }
 
 body::-webkit-scrollbar {
     width: 4px;
+    height: 4px;
 }
 
 body::-webkit-scrollbar-track {
@@ -34,14 +40,12 @@ body::-webkit-scrollbar-thumb {
     border-radius: 20px;
 }
 
+/* homepage styling */
+
 .container {
-    height: 0vh;
-    background-color: var(--black);
-    background-image: url(/images/dev.png);
-    background-repeat: no-repeat;
-    background-size: 260px;
-    background-position: 92.5% 80%;
-    background-attachment: fixed;
+    min-height: 100vh;
+    background-color: #1f1e1dc4;
+    opacity: 0;
 }
 
 header {
@@ -60,10 +64,8 @@ header {
     background-color: var(--black);
     width: 60px;
     border-radius: 50%;
-    border: solid 1px #aaaaaa;
     display: flex;
     align-items: center;
-    align-content: center;
     justify-content: center;
 }
 
@@ -71,6 +73,63 @@ header {
     font-family: 'Reggae One', cursive;
     text-decoration: none;
     font-size: 40px;
+}
+
+.menu-btn {
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    float: right;
+    right: 6%;
+    z-index: 10;
+}
+
+.menu-btn-burguer {
+    width: 40px;
+    height: 6px;
+    background: #ffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px #ff652f33;
+}
+
+.menu-btn-burguer::before, 
+.menu-btn-burguer::after {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 6px;
+    border-radius: 5px;
+    background: #ffff;
+    box-shadow: 0 2px 5px #ff652f33;
+    transition: all .4s ease-in-out;
+    left: 0;
+}
+
+.menu-btn-burguer::before {
+    transform: translateY(-14px);
+}
+
+.menu-btn-burguer::after {
+    transform: translateY(14px);
+}
+
+.menu-btn.open .menu-btn-burguer {
+    transform: translateX(-50px);
+    background: transparent;
+    box-shadow: none;
+}
+
+.menu-btn.open .menu-btn-burguer::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn-burguer::after {
+    transform: rotate(-45deg) translate(35px, 35px);
 }
 
 .menu {
@@ -98,7 +157,7 @@ header {
 }
 
 .menu a:hover {
-    color: #d6694b;
+    color: var(--orange);
 }
 
 .menu .active {
@@ -145,7 +204,7 @@ section {
 }
 
 .home {
-	height: 100vh;
+	height: 90vh;
 	display: flex;
 	text-align: left;
 	flex-direction: column;
@@ -161,8 +220,6 @@ section {
 
 .main-text {
     font-family: 'Roboto', 'Montserrat' ,sans-serif;
-    white-space: nowrap;
-    overflow: hidden;
 }
 
 .main-text h1 {
@@ -176,29 +233,47 @@ section {
 }
 
 .lets-talk {
-    position: absolute;
-    bottom: 20px;
     border-bottom: solid 1px #a3a3a3;
-}
-
-.lets-talk a {
+    max-width: 126px;
     color: var(--orange);
     font-size: 22px;
-    text-decoration: none;
     font-family: 'Reggae One', cursive;
+    margin-top: 40px;
 }
 
-.footer {
-    height: 100vh;
-    background-color: var(--black);
-    padding-top: 20%;
+footer {
+    height: 10vh;
+    width: 100%;
+    background: var(--black);
+    position: relative;
 }
 
 .links li {
     list-style: none;
     display: inline-block;
+    margin-right: 5px;
 }
 
 .links a img {
     width: 30px;
 }
+
+.content {
+    width: 90%;
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.content h1 {
+    color: var(--orange);
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+.content h4 {
+    font-size: 14px;
+}
+
+/* about page styling */
