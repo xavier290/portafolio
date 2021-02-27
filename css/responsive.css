@@ -1,245 +1,149 @@
-/* responsiveness for the homepage */
-
-@media all and (max-width: 350px) {
-    body {
-        background-image: none;
-    }
-}
-
-@media all and (max-width: 1000px) {
-    .menu-btn {
-        display: flex;
-    }
-    .menu {
-        display: flex;
-	    position: fixed;
-	    top: 0;
-	    right: 0;
-	    height: 100vh;
-	    width: 0%;
-	    background: #000000;
-	    overflow: hidden;
-	    z-index: 4;
-	    transition: all 200ms cubic-bezier(0.9, 1, 1, 1);
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-        white-space: nowrap;
-        padding-top: 10%;
-    }
-    .toggle {
-        width: 100%;
-    }
-    .menu ul {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        height: 80%;
-        text-align: center;
-    }
-    .menu li {
-        margin: 0;
-        margin-bottom: 40px;
-    }
-    .menu a {
-        font-size: 44px;
-    }
-    .menu a::after {
-        display: none;
-    }
-    .logo {
-        z-index: 10;
-    }
-}
-
-@media all and (max-width: 300px){
-    body {
-        background-position: 50% 100%;
-    }
-    .menu a {
-        font-size: 40px;
-    }
-    .home {
-        padding-top: 168px;
-    }
-    .main-text h1 {
-        font-size: 25px;
+@media all and (max-width: 300px) {
+    .salute h1{
+        font-size: 30px;
     }
     .name h1 {
+        font-size: 26px;
+    }
+    .rol h1 {
+        font-size: 26px;
+    }
+    .about {
+        padding-top: 30px;
+    }
+    .title h1 {
         font-size: 30px;
+        margin-bottom: 8px;
+    }
+    .description {
+        width: 100%;
+    }
+    .description p {
+        font-size: 16px;
+    }
+    .projects {
+        padding-top: 30px;
+    }
+    .links {
+        border-right: solid 1px #ba55364d;
+    }
+    .links a img {
+        width: 20px;
+    }
+    .content h1 {
+        font-size: 16px;
+    }
+    .content h4 {
+        font-size: 12px;
+    }
+}
+
+@media all and (max-width: 400px) and (min-width: 300px) {
+    .home {
+        padding-top: 200px;
+    }
+    .salute h1 {
+        font-size: 34px;
+    }
+    .name h1{
+        font-size: 28px;
     }
     .rol h1 {
         font-size: 28px;
     }
-    .main-text h4 {
-        font-size: 14px;
-        color: gainsboro;
+    .about {
+        padding-top: 40px;
     }
-}
-
-@media all and (max-width: 350px) and (min-width: 300px) {
-    .main-text h1 {
+    .title h1 {
         font-size: 30px;
     }
-    .name h1 {
-        font-size: 34px;
+    .description {
+        width: 100%;
     }
-    .rol h1 {
-        font-size: 32px;
-    }
-    .main-text h4 {
+    .description p {
         font-size: 16px;
     }
-    .home {
-        padding-top: 150px;
+    .projects {
+        padding-top: 40px;
+    }
+    .links {
+        border-right: solid 1px #ba55364d;
+    }
+    .links a img {
+        width: 24px;
+    }
+    .content h1 {
+        font-size: 20px;
+    }
+    .content h4 {
+        font-size: 16px;
     }
 }
 
-@media all and (max-width: 450px) and (min-width: 350px) {
-    .main-text h1 {
-        font-size: 34px;
+@media all and (max-width: 550px) and (min-width: 400px) {
+    .salute h1 {
+        font-size: 40px;
     }
     .name h1 {
-        font-size: 38px;
+        font-size: 36px;
     }
     .rol h1 {
         font-size: 36px;
     }
-    .home {
-        padding-top: 50%;
-        height: 90vh;
+    .about {
+        padding-top: 80px;
+    }
+    .description {
+        width: 100%;
+    }
+    .description p {
+        font-size: 18px;
+    }
+    .projects {
+        padding-top: 80px;
     }
 }
 
-@media all and (min-height: 1000px) and (max-width: 1100px){
-    body {
-        background-size: 400px;
-    }
-    .logo {
-        width: 90px;
-    }
-    .menu-btn {
-        display: flex;
-    }
+/* menu for mobile devices */
+
+@media all and (max-width: 1024px) {
     .menu {
-        display: flex;
-	    position: fixed;
+        position: fixed;
 	    top: 0;
 	    right: 0;
-	    height: 100vh;
-	    width: 0%;
+	    min-height: 110vh;
+	    width: 0;
 	    background: #000000;
 	    overflow: hidden;
 	    z-index: 4;
 	    transition: all 200ms cubic-bezier(0.9, 1, 1, 1);
+        white-space: nowrap;
+        display: flex;
+    }
+    .menu ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        overflow: hidden;
-        white-space: nowrap;
-        padding-top: 10%;
+        margin-top: 120px;
+    }
+    .menu li {
+	    text-align: center;
+        margin: 0;
+        margin-bottom: 40px;
+    }
+    .menu a {
+        font-size: 46px;
+    }
+    .active::after {
+        display: none;
     }
     .toggle {
         width: 100%;
     }
-    .menu ul {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        height: 80%;
-        text-align: center;
-    }
-    .menu li {
-        margin: 0;
-        margin-bottom: 40px;
-    }
-    .menu a::after {
-        display: none;
-    }
-    .logo {
-        z-index: 10;
-    }
-    .menu a {
-        font-size: 64px;
-    }
     .menu-btn {
-        width: 60px;
-        height: 70px;
-    }
-    .menu-btn-burguer {
-        height: 10px;
-        width: 44px;
-    }
-    .menu-btn-burguer::before {
-        height: 10px;
-        width: 44px;
-        transform: translateY(-18px);
-    }
-    .menu-btn-burguer::after {
-        height: 10px;
-        width: 44px;
-        transform: translateY(18px);
-    }
-    .logo a {
-        font-size: 60px;
-    }
-    .home {
-        padding-top: 40%;
-    }
-    .main-text h1 {
-        font-size: 56px;
-    }
-    .name h1 {
-        font-size: 64px;
-    }
-    .rol h1 {
-        font-size: 64px;
-    }
-    .main-text h4 {
-        font-size: 25px;
+        display: flex;
     }
 }
-
-@media all and (min-height: 1300px) {
-    body {
-        background-size: 500px;
-    }
-    .menu li {
-        margin-bottom: 90px;
-    }
-    .menu a {
-        font-size: 74px;
-    }
-    .main-text h1 {
-        font-size: 70px;
-    }
-    .main-text h4 {
-        font-size: 30px;
-    }
-}
-
-@media all and (min-width: 1300px) and (min-height: 1000px) {
-    body {
-        background-size: 400px;
-    }
-    .logo a {
-        font-size: 50px;
-    }
-    .menu a {
-        font-size: 30px;
-    }
-    a.active::after {
-        display: none;
-    }
-    .home {
-        padding-top: 25%;
-    }
-    .main-text h1 {
-        font-size: 70px;
-    }
-    .main-text h4 {
-        font-size: 26px;
-    }
-}
-
-/* this is for the about page /*
-

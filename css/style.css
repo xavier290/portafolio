@@ -21,14 +21,13 @@ body {
     background-color: var(--black);
     background-image: url(/images/dev.png);
     background-repeat: no-repeat;
-    background-size: 260px;
-    background-position: 92.5% 80%;
+    background-size: 50vh;
+    background-position: 92.5% 0%;
     background-attachment: fixed;
 }
 
 body::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
+    width: 3px;
 }
 
 body::-webkit-scrollbar-track {
@@ -67,6 +66,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 10;
 }
 
 .logo a {
@@ -80,7 +80,7 @@ header {
     display: none;
     justify-content: center;
     align-items: center;
-    width: 50px;
+    width: 40px;
     height: 40px;
     cursor: pointer;
     transition: all .4s ease-in-out;
@@ -150,7 +150,7 @@ header {
 .menu a {
     text-decoration: none;
     font-family: 'Montserrat', sans-serif;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 600;
     transition: all .4s;
     position: relative;
@@ -164,23 +164,9 @@ header {
     color: var(--orange);
 }
 
-.menu .active-p {
-    color: var(--orange);
-}
-
 .active::after {
     content: '';
-    width: 64px;
-    height: 2px;
-    background: var(--orange);
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-}
-
-.active-p::after {
-    content: '';
-    width: 82px;
+    width: 76px;
     height: 2px;
     background: var(--orange);
     position: absolute;
@@ -204,7 +190,7 @@ section {
 }
 
 .home {
-	height: 90vh;
+	height: 100vh;
 	display: flex;
 	text-align: left;
 	flex-direction: column;
@@ -232,26 +218,69 @@ section {
     color: #aaaaaa;
 }
 
-.lets-talk {
-    border-bottom: solid 1px #a3a3a3;
-    max-width: 126px;
-    color: var(--orange);
-    font-size: 22px;
-    font-family: 'Reggae One', cursive;
+.resume {
+    max-width: 100px;
     margin-top: 40px;
 }
 
+.resume a {
+    color: var(--orange);
+    font-family: 'Reggae One', cursive;
+    font-size: 28px;
+}
+
+/* about section styling */
+
+.about {
+    height: 100vh;
+    display: flex;
+    text-align: left;
+	flex-direction: column;
+	padding-top: 100px;
+}
+
+.title h1 {
+    font-family: 'Reggae One', cursive;
+    color: var(--orange);
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.description {
+    width: 80%;
+}
+
+.description p {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+/* projects section styling */
+
+.projects {
+    height: 100vh;
+}
+
+/* footer section styling */
+
 footer {
-    height: 10vh;
+    height: 40vh;
     width: 100%;
-    background: var(--black);
-    position: relative;
+    background: rgba(0, 0, 0, 0.7);
+    border-top: solid 1px rgba(255, 255, 255, 0.3);
+    display: flex;
+    align-items: center;
+}
+
+.links {
+    margin-right: 8px;
 }
 
 .links li {
     list-style: none;
     display: inline-block;
     margin-right: 5px;
+    margin-bottom: 10px;
 }
 
 .links a img {
@@ -259,9 +288,7 @@ footer {
 }
 
 .content {
-    width: 90%;
-    position: absolute;
-    bottom: 10%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -270,10 +297,19 @@ footer {
 .content h1 {
     color: var(--orange);
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 28px;
 }
 .content h4 {
-    font-size: 14px;
+    font-size: 18px;
 }
 
-/* about page styling */
+.go-up {
+    display: none;
+    position: fixed;
+    bottom: 5%;
+    right: 6%;
+}
+
+.go-up img {
+    width: 40px;
+}
